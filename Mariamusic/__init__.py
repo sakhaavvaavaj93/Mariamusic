@@ -4,7 +4,7 @@ import importlib
 from pytgcalls import PyTgCalls
 import time
 from pyrogram import Client
-from m8n import config
+from Mariamusic import config
 
 
 SUDO_USERS = config.SUDO_USERS
