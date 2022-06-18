@@ -455,7 +455,7 @@ async def cbmenu(_, query: CallbackQuery):
 
               reply_markup=menu_keyboard
          )
-         await query.message.delete()
+          await query.message.delete()
     else:
         await query.answer("nothing is currently streaming", show_alert=True)
 
