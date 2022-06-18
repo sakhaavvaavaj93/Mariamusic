@@ -6,6 +6,11 @@
   <img src="https://telegra.ph/file/de1c3c6a3b82c650b6e7b.jpg">
 </p>
 
+<h3>Contribution</h3>
+
+* @FULL_CRUAL_MIND
+* @kk_heavenhater
+
 <h3>Requirements 📝</h3>
 
 - FFmpeg
