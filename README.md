@@ -55,7 +55,7 @@
 
 
 ### 🚨 Generate String Session
-      @M8N_SESSION_BOT by using this bot
+     @SessionStringGeneratorZBot  by using this bot
 
 
 ### 🚀 Deploy To Heroku
