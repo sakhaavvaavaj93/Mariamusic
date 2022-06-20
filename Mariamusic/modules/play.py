@@ -613,10 +613,9 @@ async def play(_, message: Message):
             return await lel.edit(
                 "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
             )
-
-         await music_on(message.chat.id)
-         await add_active_chat(message.chat.id)
-     #   await message.reply_photo(
+            await music_on(message.chat.id)
+            await add_active_chat(message.chat.id)
+     #      await message.reply_photo(
      #       photo="final.png",
      #       reply_markup=keyboard,
      #       caption="**[Get Additional Information ⚠️]({})\n\n**👤 Bot User : {}**\n🌐 Group : {}**".format(
