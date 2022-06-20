@@ -396,8 +396,8 @@ async def play(_, message: Message):
                 f"❌ Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
             )
             return
-    #    requested_by = message.from_user.first_name
-     #   await generate_cover(requested_by, title, views, duration, thumbnail)
+        requested_by = message.from_user.first_name
+            await generate_cover(requested_by, title, views, duration, thumbnail)
 
         def my_hook(d):
             if d["status"] == "downloading":
@@ -584,7 +584,7 @@ async def play(_, message: Message):
 
         loop = asyncio.get_event_loop()
         x = await loop.run_in_executor(None, download, url, my_hook)
-        file_path = await cconvert(x)
+        file_path = await convert(x)
 
     if await is_active_chat(message.chat.id):
         position = await queues.put(message.chat.id, file=file_path)
@@ -609,10 +609,10 @@ async def play(_, message: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-        except Exception:
-            return await lel.edit(
-                "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
-            )
+       # except Exception:
+        #    return await lel.edit(
+         #       "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
+          #  )
 
         await music_on(message.chat.id)
         await add_active_chat(message.chat.id)
