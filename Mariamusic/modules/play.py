@@ -609,13 +609,13 @@ async def play(_, message: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-       # except Exception:
-        #    return await lel.edit(
-         #       "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
-          #  )
+        except Exception:
+            return await lel.edit(
+                "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
+            )
 
- except await music_on(message.chat.id)
-        await add_active_chat(message.chat.id)
+         await music_on(message.chat.id)
+         await add_active_chat(message.chat.id)
      #   await message.reply_photo(
      #       photo="final.png",
      #       reply_markup=keyboard,
