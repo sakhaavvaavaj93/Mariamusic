@@ -24,7 +24,7 @@ async def gib_restart(client, message, hap):
     msg_ = await message.reply_text(f"[{BOT_NAME}] - Restarting...")
     hap.restart()
     msg_ = await message.reply_text(f"[{BOT_NAME}]- Restarted successfully")
-           await message.delete(msg_)
+           
 
 
 async def aexec(code, client, message):
