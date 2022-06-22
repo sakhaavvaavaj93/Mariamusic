@@ -209,9 +209,9 @@ async def stop_cmd(_, message):
     await remove_active_chat(chat_id)
     try:
         await calls.pytgcalls.leave_group_call(chat_id)
-  #  except:
-  #      pass
-  #  await message.reply_text(
-  #      f"✅ __Erased queues in **{message.chat.title}**__\n│\n╰ Database cleaned by {checking}"
-  #  )
+    except:
+        pass
+    await message.reply_text(
+        f"✅ __Erased queues in **{message.chat.title}**__\n│\n╰ Database cleaned by {checking}"
+    )
     
