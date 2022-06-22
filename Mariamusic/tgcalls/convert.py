@@ -25,8 +25,8 @@ async def convert(file_path: str) -> str:
                 "-y -i "
                 f"{file_path} "
                 "-f float32le "
-                "-ac 1 "
-                "-ar 44100 "
+                "-ac 2 "
+                "-ar 48000 "
                 "-acodec pcm_float32le "
                 f"{out}"
             ),
