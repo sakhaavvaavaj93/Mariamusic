@@ -76,7 +76,7 @@ flex = {}
 
 def transcode(filename):
     ffmpeg.input(filename).output(
-        "input.raw", format="float32le", acodec="pcm_float32le", ac=2, ar="48k"
+        "input.raw", format="float32le", acodec="pcm_float", ac=1, ar="44.1kHz"
     ).overwrite_output().run()
     os.remove(filename)
 
