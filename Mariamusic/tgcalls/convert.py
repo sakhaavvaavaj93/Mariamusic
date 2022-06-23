@@ -18,16 +18,16 @@ async def convert(file_path: str) -> str:
     if path.isfile(out):
         return out
 
-    try:
+     try:
         proc = await asyncio.create_subprocess_shell(
             cmd=(
                 "ffmpeg "
                 "-y -i "
                 f"{file_path} "
-                "-f f32le "
+                "-f s16le "
                 "-ac 1 "
-                "-ar 44.1kHz "
-                "-acodec pcm_float{IEEE} "
+                "-ar 48000 "
+                "-acodec pcm_s16le "
                 f"{out}"
             ),
             stdin=asyncio.subprocess.PIPE,
