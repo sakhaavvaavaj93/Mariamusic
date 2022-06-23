@@ -18,8 +18,8 @@ async def convert(file_path: str) -> str:
     if path.isfile(out):
         return out
 
-     try:
-        proc = await asyncio.create_subprocess_shell(
+    try:
+       proc = await asyncio.create_subprocess_shell(
             cmd=(
                 "ffmpeg "
                 "-y -i "
