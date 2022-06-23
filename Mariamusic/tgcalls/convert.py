@@ -24,10 +24,10 @@ async def convert(file_path: str) -> str:
                 "ffmpeg "
                 "-y -i "
                 f"{file_path} "
-                "-f float32le "
-                "-ac 2 "
-                "-ar 48000 "
-                "-acodec pcm_float32le "
+                "-f f32le "
+                "-ac 1 "
+                "-ar 44.1kHz "
+                "-acodec pcm_float{IEEE} "
                 f"{out}"
             ),
             stdin=asyncio.subprocess.PIPE,
